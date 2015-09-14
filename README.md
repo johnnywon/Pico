@@ -1,7 +1,8 @@
 Pico Speed
 ====
+Pico Speed is a modification of Pico, a stupidly simple, blazing fast, flat file CMS (see http://picocms.org/).
 
-Pico is a stupidly simple, blazing fast, flat file CMS. See http://picocms.org/ for more info.
+* Installed the Skull theme (https://github.com/bananana/skull)
 
 Install
 -------
