@@ -6,6 +6,8 @@ Pico Speed is a modification of Pico, a stupidly simple, blazing fast, flat file
 
 Install
 -------
+Git clone Pico-Speed
+
     $ curl -sS https://getcomposer.org/installer | php
     $ php composer.phar install
 
