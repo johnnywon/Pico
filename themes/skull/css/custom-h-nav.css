@@ -33,18 +33,27 @@ header h1 {
 header h1 a {
 	color: #fff;
 }
-header ul {
+header ul, .revisions ul {
 	list-style: none;
 	margin: 20px 0 0 0;
 	padding: 0;
 }
-header ul li { 
+header ul li{ 
 	display: inline; 
 	margin: 0 5px;
 }
-header ul a {
+.revisions ul li {
+	margin: 0 5px 0 0;
+}
+header ul a, .revisions ul a {
 	font-weight: bold;
 }
+
+
+header .nav code { color: #fff; } 
+header .nav .danger { background-color: #d9534f; } /* red */ 
+header .nav .warning { background-color: #f0ad4e; } /* orange */ 
+header .nav .success { background-color: #5cb85c; } /* green */ 
 
 /* Footer
 /*---------------------------------------------*/
@@ -60,7 +69,7 @@ footer {
 @media (min-width: 550px) {
 	header {
 		padding: 60px 0;
-		margin-bottom: 80px;
+		margin-bottom: 30px;
 	}
 	header h1 {
 		float: left;

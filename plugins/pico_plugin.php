@@ -47,7 +47,7 @@ class Pico_Plugin
 
     public function before_read_file_meta(&$headers)
     {
-
+	    
     }
 
     public function file_meta(&$meta)

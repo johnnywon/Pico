@@ -18,7 +18,7 @@
 /*
  * BASIC
  */
- $config['site_title'] = 'Cactus';              // Site title
+ $config['site_title'] = '💡';              // Site title
 // $config['base_url'] = '';                    // Override base URL (e.g. http://example.com)
 
 /*
@@ -39,6 +39,8 @@
 // $config['pages_order'] = 'asc';                // Order pages "asc" or "desc"
 // $config['excerpt_length'] = 50;                // The pages excerpt length (in words)
 $config['content_dir'] = 'content/';    // Content directory
+
+$config['site_footer'] = "Hyperstop Content Development 🙌";
 
 /*
  * TIMEZONE

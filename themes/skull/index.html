@@ -1,3 +1,14 @@
+<!--
+ __    __  ____    ____ .______    _______ .______          _______.___________.  ______   .______  
+|  |  |  | \   \  /   / |   _  \  |   ____||   _  \        /       |           | /  __  \  |   _  \ 
+|  |__|  |  \   \/   /  |  |_)  | |  |__   |  |_)  |      |   (----`---|  |----`|  |  |  | |  |_)  |
+|   __   |   \_    _/   |   ___/  |   __|  |      /        \   \       |  |     |  |  |  | |   ___/ 
+|  |  |  |     |  |     |  |      |  |____ |  |\  \----.----)   |      |  |     |  `--'  | |  |     
+|__|  |__|     |__|     | _|      |_______|| _| `._____|_______/       |__|      \______/  | _|   
+
+Hyperstop Content Development © Copyright 2015
+http://hyperstop.co
+-->
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
@@ -31,19 +42,22 @@
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<link rel="icon" type="image/png" href="{{ theme_url }}/images/favicon.png">
 	
+    <script src="//twemoji.maxcdn.com/twemoji.min.js"></script>
+	
 </head>
 <body>
 	
 	<!-- Primary Page Layout
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	
 	<header>
 		<div class="container">
 			<div class="row">
-				<h1><a href="{{ base_url }}">{{ site_title }}</a></h1>
+				<h1><a href="{{ base_url }}">{{ meta.title }}</a></h1>
+				
 				<ul class="nav">
-					{% for page in pages %}
-					<li><a href="{{ page.url }}">{{ page.title }}</a></li>
-					{% endfor %}
+					<li>Updated <code class="{{ meta.highlight }}">{{ meta.updated }}</code></li>
+					<li>Status <code class="{{ meta.highlight }}">{{ meta.status }}</code></li>
 				</ul>
 			</div>
 		</div>
@@ -53,16 +67,28 @@
 		<div class="row">
 			{{ content }}
 		</div>
+		
+		{% if pages %}
+		<hr>
+			<div class="row revisions">
+				<h6e>REVISIONS</h6>
+				<ul class="nav">
+					{% for page in pages %}
+					<li><a href="{{ page.url }}">{{ page.title }}</a></li>
+					{% endfor %}
+				</ul>
+			</div>
+		{% endif %}
 	</section>
 	
 	<footer>
 		<div class="container">
 			<div class="row">
-				<a href="https://github.com/bananana/skull">Skull theme</a> for <a href="http://picocms.org/">Pico CMS</a> was made by <a href="http://pavelmamontov.com">Pavel Mamontov</a> 
+				<h6>{{ config.site_footer }}</h6>
 			</div>
 		</div>
 	</footer>
-	
+	 
 <!-- End Document
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->    
 </body>
